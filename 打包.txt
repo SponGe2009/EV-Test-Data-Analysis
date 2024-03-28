@@ -1,1 +1,0 @@
-cxfreeze --target-dir=dist  --target-name=EvTestDataAnalysis_V1.0 --base-name=Win32Gui --icon=LOGO.ico main.py
