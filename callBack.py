@@ -320,6 +320,12 @@ def output_callback(ui: Ui_MainWindow, mainWindow):
             if hasattr(ui, 'csv_dcdclow_energy'):
                 write_ndarray_to_excel(
                     ui.csv_dcdclow_energy, 0, 'V2', file_path)
+            if hasattr(ui, 'csv_ecpenergy'):
+                write_ndarray_to_excel(
+                    ui.csv_ecpenergy, 0, 'Y2', file_path)
+            if hasattr(ui, 'csv_ptcenergy'):
+                write_ndarray_to_excel(
+                    ui.csv_ptcenergy, 0, 'AB2', file_path)
             if hasattr(ui, 'dyno_distance'):
                 write_ndarray_to_excel(ui.dyno_distance, 0, 'C2', file_path)
             if hasattr(ui, 'drive_shaft_energy'):
