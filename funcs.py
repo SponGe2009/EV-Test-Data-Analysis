@@ -473,6 +473,17 @@ def generate_signals_for_csv(ui, attribute_name, time, filtered_time, start_time
         return None
 
 
+# 定义一个函数来检查每个值是否可以转换为浮点数
+def check_convertibility(array):
+    invalid_entries = []
+    for i, value in enumerate(array):
+        try:
+            float(value)
+        except ValueError:
+            invalid_entries.append((i, value))
+    return invalid_entries
+
+
 # 数据分析，run action回调函数的核心程序
 def data_analysis(ui, progressDialog):
     # 处理转鼓数据
